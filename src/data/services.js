@@ -1,105 +1,130 @@
-import {
-  Building2,
-  Scale,
-  Receipt,
-  TrendingUp,
-  Wallet,
-  BriefcaseBusiness,
-  Users,
-  ShieldCheck,
-  BarChart3,
-  Monitor,
-} from 'lucide-react';
-
 export const services = [
   {
-    id: 1,
-    title: 'Business Advisory',
-    description:
-      'Our team provides valuable business advisory services to help clients make informed decisions.',
-    icon: BriefcaseBusiness,
-    link: '/services/business-advisory',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80',
+    id: 'business-finance-suite',
+    title: 'Business Finance Suite',
+    description: 'End-to-end financial management solutions for growing businesses.',
+    icon: 'chart-bar',
+    offerings: [
+      'Financial Strategy & Planning',
+      'Business Valuation',
+      'Fund Raising & Debt Structuring',
+      'Mergers & Acquisitions Advisory',
+      'Investor Pitch Deck & Financial Modelling',
+      'Working Capital Optimization',
+    ],
+    intro:
+      'Our Business Finance Suite equips enterprises with the tools and advisory they need to scale sustainably. From capital structuring to investor-ready financial models, we bring institutional-grade financial rigour to SMEs and startups.',
   },
   {
-    id: 2,
-    title: 'Company Formation',
-    description:
-      'Launch your business effortlessly with expert guidance, ensuring a smooth, compliant, and successful start-up process anywhere in the world.',
-    icon: Building2,
-    link: '/services/company-formation',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80',
+    id: 'tax-defence-planning',
+    title: 'Tax Defence & Planning',
+    description: 'Strategic tax filings, compliance, and defence across all major statutes.',
+    icon: 'shield',
+    offerings: [
+      'Income Tax Return Filings',
+      'GST Return Filings',
+      'Annual Return Preparation',
+      'ETDS / TCS Filings',
+      'Tax Planning & Advisory',
+      'Advance Tax Computation',
+    ],
+    intro:
+      'We provide proactive tax planning and airtight defence strategies that protect your business from unnecessary liabilities. Our team ensures every filing is accurate, timely, and optimised for maximum savings.',
   },
   {
-    id: 3,
-    title: 'Legal And Regulatory Compliance',
-    description:
-      'Ensure your business meets all legal and regulatory requirements with expert guidance, minimizing risks and avoiding costly penalties.',
-    icon: Scale,
-    link: '/services/legal-and-regulatory-compliance',
-    image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=80',
+    id: 'regulatory-representation',
+    title: 'Regulatory Representation',
+    description: 'Expert representation for GST, Income Tax, and Labour notices.',
+    icon: 'gavel',
+    offerings: [
+      'GST Notice Response & Representation',
+      'Income Tax Notice Handling',
+      'Labour Notice Compliance',
+      'Assessment & Scrutiny Support',
+      'Appellate Proceedings',
+      'Penalty & Prosecution Defence',
+    ],
+    intro:
+      'Regulatory notices can be daunting. Our experienced professionals represent you before tax and labour authorities, ensuring swift resolution and minimal business disruption.',
   },
   {
-    id: 4,
-    title: 'Tax Advisory',
-    description:
-      'Navigate complex tax regulations with expert guidance, minimize tax liability, ensure compliance, and save valuable time and resources.',
-    icon: Receipt,
-    link: '/services/tax-advisory',
-    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80',
+    id: 'accounts-assurance',
+    title: 'Accounts & Assurance',
+    description: 'Precise bookkeeping and financial statements as per Ind AS / AS.',
+    icon: 'book-open',
+    offerings: [
+      'Bookkeeping & Accounting',
+      'Financial Statement Preparation (Ind AS / AS)',
+      'Internal Audit & Controls',
+      'Statutory Audit Support',
+      'Reconciliation & Finalization',
+      'Accounting Policy Advisory',
+    ],
+    intro:
+      'Accurate financial records are the foundation of sound business decisions. We maintain meticulous books and prepare financial statements in full compliance with Indian Accounting Standards.',
   },
   {
-    id: 5,
-    title: 'Corporate Finance & SME IPO',
-    description:
-      'We specialize in guiding SMEs through IPO processes, from regulatory compliance to strategic positioning, ensuring successful market entry.',
-    icon: TrendingUp,
-    link: '/services/corporate-finance',
-    image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80',
-  },
-  {
-    id: 6,
-    title: 'Cashflow Monitoring',
-    description:
-      'Ensure financial stability with precise cash flow management. Optimize costs to boost profitability and sustain growth effectively.',
-    icon: BarChart3,
-    link: '/services/cashflow-monitoring',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80',
-  },
-  {
-    id: 7,
-    title: 'Working Capital Management',
-    description:
-      'Ensure your business stays on track with optimal working capital management. We help balance liquidity needs and operational efficiency seamlessly.',
-    icon: Wallet,
-    link: '/services/working-capital-management',
-    image: 'https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?w=600&q=80',
-  },
-  {
-    id: 8,
-    title: 'Outsourced CFO Services',
-    description:
-      'We streamline financial operations from bookkeeping to reporting, empowering businesses to focus on core functions with expert guidance and precision.',
-    icon: Users,
-    link: '/services/virtual-cfo-services',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80',
-  },
-  {
-    id: 9,
-    title: 'Risk Management',
-    description:
-      'We assist businesses in identifying and mitigating risks to ensure financial stability and operational resilience through strategic assessments and plans.',
-    icon: ShieldCheck,
-    link: '/services/risk-management',
-    image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80',
-  },
-  {
-    id: 10,
+    id: 'virtual-cfo-services',
     title: 'Virtual CFO Services',
-    description:
-      'We help businesses manage their money and plan strategically from afar, using expert virtual CFO services to thrive.',
-    icon: Monitor,
-    link: '/services/virtual-cfo-services',
-    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80',
+    description: 'MIS, budgeting, cash flow analysis, and strategic financial reporting.',
+    icon: 'monitor',
+    offerings: [
+      'Management Information Systems (MIS)',
+      'Budgeting & Forecasting',
+      'Cash Flow Management',
+      'Ratio Analysis & KPI Tracking',
+      'Project Reports & Feasibility Studies',
+      'Board-Level Financial Reporting',
+    ],
+    intro:
+      'Get the strategic advantage of a full-time CFO without the overhead. Our Virtual CFO services deliver data-driven insights, actionable MIS reports, and financial governance tailored to your growth stage.',
+  },
+  {
+    id: 'business-launch-pads',
+    title: 'Business Launch Pads',
+    description: 'Entity setup for Proprietorships, Partnerships, Trusts, Companies & LLPs.',
+    icon: 'rocket',
+    offerings: [
+      'Sole Proprietorship Registration',
+      'Partnership Firm Setup',
+      'Trust Registration',
+      'Private Limited Company Incorporation',
+      'LLP Formation & Compliance',
+      'Startup India Registration',
+    ],
+    intro:
+      'Starting right is half the battle won. We help entrepreneurs choose the ideal business structure and handle end-to-end registration, so you can focus on building your venture.',
+  },
+  {
+    id: 'payroll-statutory-desk',
+    title: 'Payroll Statutory Desk',
+    description: 'ESI, PF, and Professional Tax registration, returns & compliance.',
+    icon: 'users',
+    offerings: [
+      'ESI Registration & Monthly Returns',
+      'Provident Fund (PF) Compliance',
+      'Professional Tax (PT) Registration & Returns',
+      'Payroll Processing & Structuring',
+      'Labour Welfare Fund Compliance',
+      'Gratuity & Bonus Calculations',
+    ],
+    intro:
+      'Stay compliant with all payroll statutory requirements. From PF and ESI to Professional Tax, we handle the entire spectrum of employee statutory obligations with precision and timeliness.',
+  },
+  {
+    id: 'tax-compliance-training',
+    title: 'Tax & Compliance Training',
+    description: 'Practical training programs for teams on tax, GST, and compliance.',
+    icon: 'graduation-cap',
+    offerings: [
+      'GST Practical Training',
+      'Income Tax Fundamentals for Teams',
+      'Compliance Awareness Workshops',
+      'Accounting Best Practices',
+      'Finance for Non-Finance Managers',
+      'Customised Corporate Training',
+    ],
+    intro:
+      'Empower your team with practical tax and compliance knowledge. Our training programs are designed for real-world application, helping your staff handle day-to-day financial responsibilities with confidence.',
   },
 ];

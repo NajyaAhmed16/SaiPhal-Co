@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { MapPin, Mail, Phone, Send } from 'lucide-react';
 import { companyInfo, footerLinks } from '../data/constants';
 
@@ -17,13 +18,13 @@ export default function Footer() {
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand Column */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <a href="/" className="mb-6 inline-block">
+            <Link to="/" className="mb-6 inline-block">
               <img
                 src={companyInfo.logo}
                 alt="CFO Services"
                 className="h-10 w-auto brightness-200"
               />
-            </a>
+            </Link>
             <p className="mb-6 text-sm leading-relaxed text-gray-400">
               {companyInfo.legalName}, {companyInfo.address}
             </p>
@@ -55,12 +56,12 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-sm transition-colors hover:text-gold-400"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -117,9 +118,9 @@ export default function Footer() {
           <p className="text-xs text-gray-500">
             All rights reserved by CFO Services
           </p>
-          <a href="/privacy-policy" className="text-xs text-gray-500 transition-colors hover:text-gold-400">
+          <Link to="/privacy-policy" className="text-xs text-gray-500 transition-colors hover:text-gold-400">
             Privacy Policy
-          </a>
+          </Link>
         </div>
       </div>
     </footer>

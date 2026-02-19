@@ -1,37 +1,39 @@
 import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { navLinks, companyInfo } from '../data/constants';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       <nav className="container-max px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <a href="/" className="flex-shrink-0">
+          <Link to="/" className="flex-shrink-0">
             <img
               src={companyInfo.logo}
               alt="CFO Services"
               className="h-12 w-auto"
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden items-center gap-1 lg:flex">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
+                to={link.href}
                 className={`rounded-md px-4 py-2 text-sm font-medium transition-colors ${
-                  link.active
+                  location.pathname === link.href
                     ? 'text-gold-400'
                     : 'text-navy-800 hover:text-gold-400'
                 }`}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -59,18 +61,18 @@ export default function Navbar() {
           <div className="border-t border-gray-100 pb-4 lg:hidden">
             <div className="flex flex-col space-y-1 pt-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.label}
-                  href={link.href}
+                  to={link.href}
                   className={`rounded-md px-4 py-2.5 text-sm font-medium transition-colors ${
-                    link.active
+                    location.pathname === link.href
                       ? 'bg-gold-50 text-gold-400'
                       : 'text-navy-800 hover:bg-gray-50 hover:text-gold-400'
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
               <div className="px-4 pt-4">
                 <a

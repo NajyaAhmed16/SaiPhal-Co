@@ -1,25 +1,24 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import TopBar from './components/TopBar';
 import Navbar from './components/Navbar';
-import HeroSection from './components/HeroSection';
-import ServicesSection from './components/ServicesSection';
-import CTASection from './components/CTASection';
-import ExpertiseSection from './components/ExpertiseSection';
-import TestimonialsSection from './components/TestimonialsSection';
 import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import ServicePage from './pages/ServicePage';
 
 export default function App() {
   return (
-    <div className="flex min-h-screen flex-col">
-      <TopBar />
-      <Navbar />
-      <main className="flex-1">
-        <HeroSection />
-        <ServicesSection />
-        <CTASection />
-        <ExpertiseSection />
-        <TestimonialsSection />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="flex min-h-screen flex-col">
+        <TopBar />
+        <Navbar />
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/services/:serviceId" element={<ServicePage />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }

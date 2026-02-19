@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function CTASection() {
@@ -18,13 +19,13 @@ export default function CTASection() {
           <p className="mx-auto mb-10 max-w-2xl text-lg text-gray-400">
             Let us help you capture, measure, and improve your financial performance with data-driven strategies.
           </p>
-          <a
-            href="/contact-us"
+          <Link
+            to="/contact-us"
             className="btn-primary inline-flex items-center gap-2 px-8 py-4 text-base"
           >
             Get Started Now
             <ArrowRight className="h-5 w-5" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

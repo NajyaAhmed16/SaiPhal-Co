@@ -2,7 +2,7 @@ export const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/about' },
   { label: 'Why Us', href: '/why-us' },
-  { label: 'CFO Services', href: '/services', active: true },
+  { label: 'CFO Services', href: '/services' },
   { label: 'Articles', href: '/blog/articles' },
   { label: 'Contact Us', href: '/contact-us' },
 ];

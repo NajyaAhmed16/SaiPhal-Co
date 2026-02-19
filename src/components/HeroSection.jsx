@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { CheckCircle } from 'lucide-react';
 import { stats } from '../data/constants';
 
@@ -18,8 +19,8 @@ export default function HeroSection() {
               CFO Services
             </span>
             <h1 className="mb-6 font-heading text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
-              Your Comprehensive{' '}
-              <span className="text-gold-400">Financial Excellence</span>{' '}
+              SaiPhal&Co{' '}<br></br>
+              <span className="text-gold-400"> Your Financial Excellence</span>{' '}
               Partner
             </h1>
             <p className="mb-8 max-w-lg text-lg leading-relaxed text-gray-300">
@@ -41,9 +42,9 @@ export default function HeroSection() {
             </ul>
 
             <div className="flex flex-wrap gap-4">
-              <a href="/contact-us" className="btn-primary">
+              <Link to="/contact-us" className="btn-primary">
                 Get Started Now
-              </a>
+              </Link>
               <a href="#services" className="btn-outline">
                 Explore Services
               </a>
